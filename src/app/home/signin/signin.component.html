@@ -1,54 +1,59 @@
-<!-- <div class="p-grid p-align-center vertical-container">
-    <div class="p-col-4">
-        <div class="box"></div>
-    </div>
-    <div class="p-col-4">
-        <div class="p-col-12">
-          <input type="text" pInputText [(ngModel)]="usuario"/>
-        </div>
-        <div class="p-col-12">
-          <button pButton type="button" label="Logar" ></button>
-        </div>
-    </div>
-    <div class="p-col-4">
-        <div class="box"></div>
-    </div>
-</div> -->
-
-<div class="center">
-  <!-- <h1>Hello Angular 8!</h1> -->
-
-    <div class='p-col'>
-      A
-    </div>
-    <div class='p-col'>
-      <div class='p-col-12'>
+<!-- <div class="center">
+    <div class='p-col' style='display: flex; flex-direction: row;'>
+      <div class='p-col-2'>
+        Usuário &nbsp;
+      </div>
+      <div class='p-col-8'>
         <input type="text" pInputText [(ngModel)]="usuario"/>
       </div>
-      <div class='p-col-12'>
+      <div class='p-col-2'>
+        Usuário &nbsp;
+      </div>
+      <div class='p-col-8'>
+        <input type="text" pInputText [(ngModel)]="usuario"/>
+      </div>
+    </div>
+    <div class='p-col'>
+      <div class='p-col-12' style='display: flex; justify-content: center; align-items: center;'>
+        Usuário &nbsp;
+        <input type="text" pInputText [(ngModel)]="usuario"/>
+      </div>
+      <div class='p-col-12' style='display: flex; justify-content: center; align-items: center;'>
+        Senha &nbsp;
+        <input type="text" pInputText [(ngModel)]="usuario"/>
+      </div>
+      <div class='p-col-12' style='display: flex; justify-content: center;'>
         <button pButton type="button" label="Logar" ></button>
       </div>
       <br />
-
     </div>
     <div class='p-col'>
-      B
     </div>
-
-
-</div>
-
-
-<!-- <div class="container">
-  <div class="box">
-    <input type="text" pInputText [(ngModel)]="usuario"/>
-    <br />
-    <button pButton type="button" label="Logar" ></button>
-  </div>
-</div>
-
-<div class="p-d-flex p-flex-column">
-  <div class="p-mb-2">Item 1</div>
-  <div class="p-mb-2">Item 2</div>
-  <div>Item 3</div>
 </div> -->
+
+<div class='p-grid p-justify-center' style='height: 99vh;'>
+  <div class='p-col' style="background-color: lightgray; "></div>
+  <div class='p-col' style="background-color: lightgray; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div class='p-grid'>
+      <div class='p-col-12' style="display: flex; justify-content: center;">
+        <h1>Login</h1>
+      </div>
+      <div class="p-col-2" style="display: flex; align-items: center; justify-content: center;">
+        Usuário &nbsp;
+      </div>
+      <div class="p-col-10">
+        <input type="text" pInputText [(ngModel)]="usuario" style="min-width: 100%; min-height: 40px;" />
+      </div>
+      <div class="p-col-2" style="display: flex; align-items: center; justify-content: center;">
+        Senha &nbsp;
+      </div>
+      <div class="p-col-10">
+        <input type="text" pInputText [(ngModel)]="usuario" style="min-width: 100%; min-height: 40px;" />
+      </div>
+      <div class='p-col-12'>
+        <button pButton type="button" label="Logar" style="min-width: 100%;"></button>
+      </div>
+    </div>
+  </div>
+  <div class='p-col' style="background-color: lightgray;"></div>
+</div>
