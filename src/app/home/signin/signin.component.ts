@@ -44,7 +44,6 @@ export class SigninComponent implements OnInit {
     usuarioModel.usuario = usuario.value;
     usuarioModel.senha = senha.value;
     this.usuarioService.setUser(usuarioModel);
-    console.log('Logando com o usuário: ' + this.formLogin.get('usuario').value);
     this.router.navigate(['tarefas']);
   }
 

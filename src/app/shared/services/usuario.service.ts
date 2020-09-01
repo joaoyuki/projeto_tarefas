@@ -15,8 +15,16 @@ export class UsuarioService {
     return this.usuarioSubject;
   }
 
+  getUsuarioModel(): UsuarioModel {
+    return this.usuarioSubject.value;
+  }
+
   setUser(usuario) {
     this.usuarioSubject.next(usuario);
+  }
+
+  logout() {
+    this.usuarioSubject.next(null);
   }
 
 }

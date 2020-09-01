@@ -3,6 +3,7 @@ import { UsuarioService } from './../../shared/services/usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cabecalho',
@@ -16,18 +17,15 @@ export class CabecalhoComponent implements OnInit {
   usuarioModel: UsuarioModel;
 
   constructor(
-    private usuarioService: UsuarioService
+    private usuarioService: UsuarioService,
+    private router: Router
   ) {
     this.usuarioService.getUser().subscribe(usuario => {
-      console.log('---- ' + usuario);
       this.usuarioModel = usuario;
     })
   }
 
   ngOnInit(): void {
-
-
-
 
     this.items = [
       {
@@ -44,10 +42,16 @@ export class CabecalhoComponent implements OnInit {
       },
       {
           label: 'Sair',
-          icon: 'pi pi-fw pi-power-off'
+          icon: 'pi pi-fw pi-power-off',
+          command: () => {this.logout();}
       }
   ];
 
+  }
+
+  logout() {
+    this.usuarioService.logout();
+    this.router.navigate(['']);
   }
 
 }
