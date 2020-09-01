@@ -1,7 +1,9 @@
 <p-toast position="top-right" life='100'></p-toast>
 
 <div class="p-d-flex p-jc-center">
-  <div class="p-mr-2"><input style="height: 100%;" type="text" id='desc_tarefa' [(ngModel)]='descricao' pInputText (keydown.enter)="adicionar()"  /></div>
+  <div class="p-mr-2">
+    <input #tarefasInput style="height: 100%;" type="text" id='desc_tarefa' [(ngModel)]='descricao' pInputText (keydown.enter)="adicionar()"  />
+  </div>
   <div><button pButton type="button" (click)="adicionar()" label="Adicionar" ></button></div>
 </div>
 

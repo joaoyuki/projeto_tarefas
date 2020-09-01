@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 
@@ -17,6 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './home/signin/signin.component';
 import { SignupComponent } from './home/signup/signup.component';
+import { CabecalhoComponent } from './home/cabecalho/cabecalho.component';
+import { MenubarModule } from 'primeng/menubar';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { SignupComponent } from './home/signup/signup.component';
     TarefasComponent,
     HomeComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    CabecalhoComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,9 @@ import { SignupComponent } from './home/signup/signup.component';
     MessageModule,
     ToastModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

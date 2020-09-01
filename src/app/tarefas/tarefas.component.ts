@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Tarefa } from 'src/model/tarefa';
 import { MessageService } from 'primeng/api';
 
@@ -8,6 +8,8 @@ import { MessageService } from 'primeng/api';
   styleUrls: ['./tarefas.component.css']
 })
 export class TarefasComponent implements OnInit {
+
+  @ViewChild('tarefasInput') tarefasInput: ElementRef<HTMLInputElement>;
 
   constructor(
     private messageService: MessageService
@@ -28,6 +30,7 @@ export class TarefasComponent implements OnInit {
       return;
     }
     this.tarefas.push({ descricao: this.descricao, dataCriacao: new Date(), dataFinalizacao: null });
+    this.tarefasInput.nativeElement.focus();
     this.descricao = '';
 
   }
